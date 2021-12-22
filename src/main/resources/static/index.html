@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+
+    <script src="process.js"></script>
+    <style>
+        .align1{
+            position: absolute;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron py-3">
+            <p class="h2 text-center">Bill Split App</p>
+        </div>
+
+        <table  class="table">
+            <thead>
+                <tr>
+                    <td><b>Member ID</b></td> 
+                    <td><b>Member Name</b></td>
+                    <td><b>Amount Paid</b></td>
+                    <td><b>Delete Record</b></td>
+                    
+                </tr>
+            </thead>
+            <tbody id="list">
+            </tbody>
+            <tfoot>
+                <tr>
+                
+                  <td><div class="form-group mt-2">
+                
+                </div></td>
+                <td>
+                    <div class="form-group mt-2">
+                        <input type="text" class="form-control" id="newName" placeholder="Name" oninput="textChanged()"> 
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group mt-2">
+                        <input type="text" class="form-control" id="newAmount" placeholder="Amount" oninput="textChanged()">
+                    </div>
+                </td>
+                </tr>
+              </tfoot>
+        </table>
+
+        <button id="addButton" class="btn btn-primary" onclick="addMember()" disabled>
+            Add Member
+        </button>
+
+        <button id="delButton" class="btn btn-danger" onclick="deleteMember()">
+            Clear All Records
+        </button>
+
+        <button id="delButton" class="btn btn-success" onclick="getTransactions()">
+            Get Transactions
+        </button>
+        
+
+  
+        
+    <div id="Transactions"></div>
+    
+    
+</div>
+<script>mapList();</script>
+</body>
+
+</html>
