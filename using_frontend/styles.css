@@ -1,0 +1,16 @@
+
+.expense-table{
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+}
+
+#main-app {
+    background-color: rgb(255, 243, 229);
+    width: fit-content;
+    font-family: Courier;
+}
+
+td, th {
+    padding: 15px;
+}
